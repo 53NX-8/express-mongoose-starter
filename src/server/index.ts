@@ -6,7 +6,6 @@ import morgan from "morgan";
 import connect from "../config/connect";
 import router from "../routes";
 import AppError from "../utils/app_error";
-import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import validateEnv from "../utils/validate_env";
 
@@ -61,5 +60,4 @@ bootstrap()
         throw err;
     })
     .finally(async () => {
-        await mongoose.disconnect()
     });
